@@ -4,13 +4,14 @@ def my_min(list)
     min = list[0]
     list.each do |ele1|
         list.each do |ele2|
+    # min = ele1
     
-            next if ele1 == ele2
-            min = ele1 if ele1 < min
-            if ele1 > ele2
-                min = ele2
+            # next if ele1 == ele2
+            # min = ele1 if ele1 < min
+            # if ele1 > ele2
+            #     min = ele2
 
-            end
+            # end
         end
     end
     min
