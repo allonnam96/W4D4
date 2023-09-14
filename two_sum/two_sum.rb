@@ -27,5 +27,39 @@ def okay_two_sum?(arr, target_sum)
 end
 
 
-p okay_two_sum?(arr, 6) # => should be true
-p okay_two_sum?(arr, 10) # => should be false
+# p okay_two_sum?(arr, 6) # => should be true
+# p okay_two_sum?(arr, 10) # => should be false
+
+
+def two_sum?(arr, target_sum)
+    hash = Hash.new{|h,k|  h[k] = true}
+
+    arr.each do |num|
+        hash[num] 
+    end 
+    
+    hash.each_key do |key|
+        remainder = target_sum - key
+
+        if key == remainder 
+            break
+        end 
+
+        result = hash.has_key?(remainder)
+        return true if result == true 
+    end 
+    false
+end 
+
+
+arr = [0, 1, 5, 7]
+p two_sum?(arr, 6) # => should be true
+p two_sum?(arr, 10) # => should be false
+
+
+
+
+
+
+
+
